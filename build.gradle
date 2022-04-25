@@ -19,14 +19,23 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     // 健康检查
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
-
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    runtimeOnly 'mysql:mysql-connector-java'
+    // 管理数据库脚本
+    runtimeOnly 'org.flywaydb:flyway-core'
 
     // 通过 bom 统一管理版本
     testImplementation platform('org.junit:junit-bom:5.7.0')
     testImplementation 'org.junit.jupiter:junit-jupiter-api'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 
-    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.6.6'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // 通过 docker 运行测试
+    testImplementation 'org.testcontainers:testcontainers:1.16.2'
+    testImplementation 'org.testcontainers:mysql:1.16.2'
+
+
 }
 
 java {
