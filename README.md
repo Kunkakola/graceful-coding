@@ -1,2 +1,3 @@
 # graceful-coding
-learn to code gracefully
+> make code not only workable but graceful
+
