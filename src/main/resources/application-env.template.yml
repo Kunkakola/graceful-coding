@@ -1,4 +1,4 @@
-
+## 项目配置文件模板
 server:
   port: 8088
   servlet:
