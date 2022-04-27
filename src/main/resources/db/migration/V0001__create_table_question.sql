@@ -1,7 +1,7 @@
 -- 问题表
 drop table if exists `question`;
 CREATE TABLE `question` (
-  `id` varchar(64) NOT NULL COMMENT '主键',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `questioner_id` varchar(64) NOT NULL COMMENT '提问人ID',
   `title` varchar(128) NOT NULL COMMENT '标题',
   `detail` text DEFAULT NULL COMMENT '描述',

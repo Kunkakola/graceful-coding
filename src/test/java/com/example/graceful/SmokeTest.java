@@ -23,12 +23,12 @@ class SmokeTest {
     private MockMvc mockMvc;
 
     @Test
-    void one_plus_one_should_equal_two() {
+    void onePlusOneShouldEqualTwo() {
         Assertions.assertEquals(2, 1 + 1);
     }
 
     @Test
-    void should_return_ok_when_request_endpoint_of_health() throws Exception {
+    void shouldReturnOkWhenRequestEndpointOfHealth() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/actuator/health"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.status").value("UP"));

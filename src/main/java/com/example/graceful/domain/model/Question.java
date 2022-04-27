@@ -20,7 +20,7 @@ public class Question {
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Long id;
 
     /**
      * 提问人
@@ -47,7 +47,7 @@ public class Question {
         this.detail = detail;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 

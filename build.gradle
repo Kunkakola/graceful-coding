@@ -2,6 +2,7 @@ import org.springframework.boot.gradle.plugin.SpringBootPlugin
 
 plugins {
     id 'java'
+    id 'checkstyle'
     id 'org.springframework.boot' version '2.6.6'
 }
 
@@ -9,6 +10,10 @@ group 'org.example'
 version '1.0-SNAPSHOT'
 
 repositories {
+    maven {
+        url 'https://maven.aliyun.com/repository/public/'
+    }
+    mavenLocal()
     mavenCentral()
 }
 
@@ -43,6 +48,12 @@ java {
         languageVersion.set(JavaLanguageVersion.of(8))
     }
 }
+
+checkstyle {
+    maxWarnings(0)
+    toolVersion("8.16")
+}
+
 
 test {
     useJUnitPlatform()

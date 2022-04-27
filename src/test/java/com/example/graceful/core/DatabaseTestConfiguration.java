@@ -35,7 +35,7 @@ public class DatabaseTestConfiguration {
 
     @Bean
     @FlywayDataSource
-    public DataSource dataSource(MySQLContainer<?> mySQLContainer){
+    public DataSource dataSource(MySQLContainer<?> mySQLContainer) {
         HikariConfig hikariConfig = new HikariConfig();
         hikariConfig.setJdbcUrl(mySQLContainer.getJdbcUrl());
         hikariConfig.setUsername(mySQLContainer.getUsername());
