@@ -10,5 +10,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author jiangyu-045
  * @date 2022-04-25 13:47
  **/
-public interface QuestionRepository extends JpaRepository<Question, String> {
+public interface QuestionRepository extends JpaRepository<Question, Long> {
 }
