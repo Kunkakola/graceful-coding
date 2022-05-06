@@ -1,6 +1,6 @@
 package com.example.graceful.domain.repository;
 
-import com.example.graceful.domain.model.Question;
+import com.example.graceful.domain.model.entity.Question;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

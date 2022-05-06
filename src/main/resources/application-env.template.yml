@@ -7,6 +7,6 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/graceful-coding?useSSL=false&characterEncoding=UTF-8&rewriteBatchedStatements=true
+    url: jdbc:mysql://localhost:3306/graceful-coding?serverTimezone=Asia/Shanghai&useSSL=false&characterEncoding=UTF-8&rewriteBatchedStatements=true
     username: root
     password: root

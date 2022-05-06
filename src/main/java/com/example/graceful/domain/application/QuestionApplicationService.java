@@ -2,7 +2,7 @@ package com.example.graceful.domain.application;
 
 import com.example.graceful.domain.application.command.QuestionCreateCommand;
 import com.example.graceful.domain.application.result.QuestionCreateResult;
-import com.example.graceful.domain.model.Question;
+import com.example.graceful.domain.model.entity.Question;
 import com.example.graceful.domain.repository.QuestionRepository;
 
 import org.springframework.stereotype.Service;
