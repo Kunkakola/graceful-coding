@@ -51,7 +51,7 @@ java {
 
 checkstyle {
     maxWarnings(0)
-    toolVersion("8.16")
+    toolVersion("9.2.1")
 }
 
 

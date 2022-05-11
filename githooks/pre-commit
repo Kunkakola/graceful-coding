@@ -4,7 +4,7 @@
 git stash -qku
 
 # check 检查命令 ~= 运行测试 test
-./gradlew clean test
+./gradlew clean check
 
 # 定义变量接收上一行结果
 RESULT=$?

@@ -102,8 +102,8 @@ public class QuestionUpdatedRecord {
      * @date 2022/4/29 16:50
      */
     public static QuestionUpdatedRecord ofCreated(String updaterId, String createdTitle, String createdDetail) {
-        return new QuestionUpdatedRecord(UpdateType.CREATED, updaterId, OffsetDateTime.now().withNano(0), null, createdTitle, createdDetail, null,
-                null, null, null);
+        return new QuestionUpdatedRecord(UpdateType.CREATED, updaterId, OffsetDateTime.now().withNano(0), null, createdTitle, createdDetail,
+                                         null, null, null, null);
     }
 
     /**
@@ -119,8 +119,8 @@ public class QuestionUpdatedRecord {
      * @date 2022/4/29 16:53
      */
     public static QuestionUpdatedRecord ofTitleEdited(String updaterId, String reason, String uneditedTitle, String editedTitle) {
-        return new QuestionUpdatedRecord(UpdateType.TITLE_EDITED, updaterId, OffsetDateTime.now().withNano(0), reason, null, null, uneditedTitle,
-                editedTitle, null, null);
+        return new QuestionUpdatedRecord(UpdateType.TITLE_EDITED, updaterId, OffsetDateTime.now().withNano(0), reason, null, null,
+                                         uneditedTitle, editedTitle, null, null);
     }
 
     /**
@@ -136,8 +136,8 @@ public class QuestionUpdatedRecord {
      * @date 2022/4/29 16:54
      */
     public static QuestionUpdatedRecord ofDetailEdited(String updaterId, String reason, String uneditedDetail, String editedDetail) {
-        return new QuestionUpdatedRecord(UpdateType.DETAIL_EDITED, updaterId, OffsetDateTime.now().withNano(0), reason, null, null, null, null,
-                uneditedDetail, editedDetail);
+        return new QuestionUpdatedRecord(UpdateType.DETAIL_EDITED, updaterId, OffsetDateTime.now().withNano(0), reason, null, null, null,
+                                         null, uneditedDetail, editedDetail);
     }
 
     public UpdateType getUpdateType() {
@@ -189,22 +189,22 @@ public class QuestionUpdatedRecord {
             return false;
         }
         return getUpdateType() == that.getUpdateType()
-                && Objects.equals(getUpdaterId(), that.getUpdaterId())
-                && Objects.equals(getUpdatedAt(), that.getUpdatedAt())
-                && Objects.equals(getReason(), that.getReason())
-                && Objects.equals(getCreatedTitle(), that.getCreatedTitle())
-                && Objects.equals(getCreatedDetail(), that.getCreatedDetail())
-                && Objects.equals(getUneditedTitle(), that.getUneditedTitle())
-                && Objects.equals(getEditedTitle(), that.getEditedTitle())
-                && Objects.equals(getUneditedDetail(), that.getUneditedDetail())
-                && Objects.equals(getEditedDetail(), that.getEditedDetail());
+               && Objects.equals(getUpdaterId(), that.getUpdaterId())
+               && Objects.equals(getUpdatedAt(), that.getUpdatedAt())
+               && Objects.equals(getReason(), that.getReason())
+               && Objects.equals(getCreatedTitle(), that.getCreatedTitle())
+               && Objects.equals(getCreatedDetail(), that.getCreatedDetail())
+               && Objects.equals(getUneditedTitle(), that.getUneditedTitle())
+               && Objects.equals(getEditedTitle(), that.getEditedTitle())
+               && Objects.equals(getUneditedDetail(), that.getUneditedDetail())
+               && Objects.equals(getEditedDetail(), that.getEditedDetail());
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(getUpdateType(), getUpdaterId(), getUpdatedAt(), getReason(),
-                getCreatedTitle(), getCreatedDetail(), getUneditedTitle(),
-                getEditedTitle(), getUneditedDetail(), getEditedDetail());
+                            getCreatedTitle(), getCreatedDetail(), getUneditedTitle(),
+                            getEditedTitle(), getUneditedDetail(), getEditedDetail());
     }
 
     public enum UpdateType {
